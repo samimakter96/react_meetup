@@ -18,7 +18,7 @@ export async function POST(req) {
     }
 
     // Step 3: Connect to MongoDB
-    const client = await MongoClient.connect('mongodb+srv://samim:9GTVxz9WmfwpvgT1@cluster0.uvriynl.mongodb.net/?retryWrites=true&w=majority');
+    const client = await MongoClient.connect(process.env.MONGODB_URL);
     console.log('Connected to MongoDB');
 
     // Step 4: Select the database and collection
